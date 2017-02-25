@@ -4,7 +4,7 @@
         <div class="container">
         <div class="row">
         {% for article in (articles_page.object_list if articles_page else articles) %}
-            <div class ="col-xs-6">
+            <div class ="col-xs-4">
             <article>
                 {% if article.image %}
                 <img width="50%" class="img-thumbnail" src="{{ SITEURL }}/images/{{ article.image }}"/>
