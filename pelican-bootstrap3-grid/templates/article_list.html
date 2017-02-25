@@ -1,7 +1,10 @@
 {% extends "base.html" %}
 {% block content %}
     {% if articles %}
+        <div class="container">
+        <div class="row">
         {% for article in (articles_page.object_list if articles_page else articles) %}
+            <div class ="col-xs-6">
             <article>
                 <h2><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h2>
                 {% if DISPLAY_ARTICLE_INFO_ON_INDEX %}
@@ -15,7 +18,10 @@
                 </div>
             </article>
             <hr/>
+            </div>
         {% endfor %}
+        </div>
+        </div>
     {% endif %}
 
     {% include 'includes/pagination.html' %}
