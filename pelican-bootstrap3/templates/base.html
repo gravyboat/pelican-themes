@@ -146,6 +146,15 @@
     </div>
 </div>
 {% include 'includes/footer.html' %}
+{% if BANNER %}
+    <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/bodypadding.js"></script>
+{% endif %}
+{% include 'includes/github-js.html' %}
+{% include 'includes/disqus_script.html' %}
+{% include 'includes/ga.html' %}
+{% include 'includes/piwik.html' %}
+
+{% block scripts %}{% endblock %}
     <!-- Bootstrap -->
     {% if BOOTSTRAP_THEME %}
         <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/bootstrap.{{ BOOTSTRAP_THEME }}.min.css" type="text/css"/>
@@ -200,14 +209,5 @@
 <!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
 <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/respond.min.js"></script>
 
-{% if BANNER %}
-    <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/bodypadding.js"></script>
-{% endif %}
-{% include 'includes/github-js.html' %}
-{% include 'includes/disqus_script.html' %}
-{% include 'includes/ga.html' %}
-{% include 'includes/piwik.html' %}
-
-{% block scripts %}{% endblock %}
 </body>
 </html>
