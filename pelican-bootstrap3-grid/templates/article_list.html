@@ -6,7 +6,7 @@
         {% for article in (articles_page.object_list if articles_page else articles) %}
             <div class ="col-xs-6">
             <article>
-                {% if article.title %}
+                {% if article.image %}
                 <img width="50%" class="img-thumbnail" src="{{ SITEURL }}/images/{{ article.image }}"/>
                 {% endif %}
                 <h3><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h3>
