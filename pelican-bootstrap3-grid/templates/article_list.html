@@ -6,7 +6,10 @@
         {% for article in (articles_page.object_list if articles_page else articles) %}
             <div class ="col-xs-6">
             <article>
-                <h2><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h2>
+                {% if {{ article.image }} %}
+                    <img width="100%" class="img-thumbnail" src="{{ SITEURL }}/images/{{ article.image }}"/>
+                {% endif %}
+                <h3><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h3>
                 {% if DISPLAY_ARTICLE_INFO_ON_INDEX %}
                     <div class="well well-sm">
                         {% include "includes/article_info.html" %}
