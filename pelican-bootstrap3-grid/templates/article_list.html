@@ -7,7 +7,7 @@
             <div class ="col-xs-18 col-sm-6 col-lg-4">
             <article>
                 {% if article.image %}
-                <img width="100%" class="img-thumbnail" src="{{ SITEURL }}/images/{{ article.image }}"/>
+                <a href="{{ SITEURL }}/{{ article.url }}"><img width="100%" class="img-thumbnail" src="{{ SITEURL }}/images/{{ article.image }}"/></a>
                 {% endif %}
                 <h3><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h3>
                 {% if DISPLAY_ARTICLE_INFO_ON_INDEX %}
