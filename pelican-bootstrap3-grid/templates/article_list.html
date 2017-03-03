@@ -2,9 +2,9 @@
 #{% block content %}
     {% if articles %}
         <div class="container">
-        <div class="row">
+        <div class="">
         {% for article in (articles_page.object_list if articles_page else articles) %}
-            <div class ="col-xs-18 col-sm-6 col-lg-4">
+            <div class ="col">
             <article>
                 {% if article.image %}
                 <a href="{{ SITEURL }}/{{ article.url }}"><img class="img-responsive" src="{{ SITEURL }}/images/{{ article.image }}" alt="{{ article.title }}"/></a>
