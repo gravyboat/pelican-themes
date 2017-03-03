@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% block content %}
+#{% block content %}
     {% if articles %}
         <div class="container">
         <div class="row">
@@ -15,10 +15,11 @@
                         {% include "includes/article_info.html" %}
                     </div> -->
                 {% endif %}
+<!--
                 <div class="summary">{{ article.summary }}
                     {% include 'includes/comment_count.html' %}
                     <a class="btn btn-default btn-xs" href="{{ SITEURL }}/{{ article.url }}">more ...</a>
-                </div>
+                </div> -->
             </article>
             <hr/>
             </div>
