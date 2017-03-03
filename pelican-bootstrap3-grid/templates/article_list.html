@@ -1,8 +1,10 @@
 {% extends "base.html" %}
 <style media="screen" type="text/css">
-.row.less-padding{
-    padding-left: 5;
-    padding-right: 5;
+.row.less-padding {
+    [class*="col-"] {
+        padding-left: 5 !important;
+        padding-right: 5 !important;
+    }
 }
 </style>
 {% block content %}
