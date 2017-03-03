@@ -1,25 +1,24 @@
 {% extends "base.html" %}
 #{% block content %}
     {% if articles %}
-        <div class="container">
-        <div class="">
+        <div class="container-fluid">
+        <div class="row">
         {% for article in (articles_page.object_list if articles_page else articles) %}
-            <div class ="col">
+            <div class ="col-xs-18 col-sm-6 col-md-4 col-lg-4">
             <article>
                 {% if article.image %}
                 <a href="{{ SITEURL }}/{{ article.url }}"><img class="img-responsive" src="{{ SITEURL }}/images/{{ article.image }}" alt="{{ article.title }}"/></a>
                 {% endif %}
                 <h3><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h3>
                 {% if DISPLAY_ARTICLE_INFO_ON_INDEX %}
-<!--                    <div class="well well-sm">
+                    <div class="well well-sm">
                         {% include "includes/article_info.html" %}
-                    </div> -->
+                    </div>
                 {% endif %}
-<!--
                 <div class="summary">{{ article.summary }}
                     {% include 'includes/comment_count.html' %}
                     <a class="btn btn-default btn-xs" href="{{ SITEURL }}/{{ article.url }}">more ...</a>
-                </div> -->
+                </div>
             </article>
             <hr/>
             </div>
