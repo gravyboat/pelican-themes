@@ -1,16 +1,8 @@
 {% extends "base.html" %}
-<style media="screen" type="text/css">
-.row.less-padding {
-    [class*="col-"] {
-        padding-left: 5 !important;
-        padding-right: 5 !important;
-    }
-}
-</style>
 {% block content %}
     {% if articles %}
         <div class="container-fluid">
-        <div class="row row.less-padding">
+        <div class="row">
         {% for article in (articles_page.object_list if articles_page else articles) %}
             <div class ="col-xs-18 col-sm-6 col-md-4 col-lg-4">
             <article>
@@ -28,7 +20,7 @@
                     <a class="btn btn-default btn-xs" href="{{ SITEURL }}/{{ article.url }}">more ...</a>
                 </div>
             </article>
-            <hr/>
+<!--        <hr/> -->
             </div>
         {% endfor %}
         </div>
