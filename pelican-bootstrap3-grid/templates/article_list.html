@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
     {% if articles %}
-    <!--        <div class="container-fluid"> -->
+        <div class="container-fluid">
         <div class="row">
         {% for article in (articles_page.object_list if articles_page else articles) %}
             <div class ="col-xs-18 col-sm-6 col-md-4 col-lg-4".col-xs-18 .col-sm-6 .col-md-4 .col-lg-4>
@@ -25,7 +25,7 @@
             <hr\> -->
             </div>
         {% endfor %}
-        <!--        </div> -->
+        </div>
         </div>
     {% endif %}
 
