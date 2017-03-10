@@ -9,7 +9,7 @@
                     {% if article.image %}
                     <a href="{{ SITEURL }}/{{ article.url }}"><img class="img-responsive" src="{{ SITEURL }}/images/{{ article.image }}" alt="{{ article.title }}"/></a>
                     {% endif %}
-                    <h3><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h3>
+                    <h4><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h4>
                     {% if DISPLAY_ARTICLE_INFO_ON_INDEX %}
                         <div class="well well-sm">
                             {% include "includes/article_info.html" %}
