@@ -12,6 +12,7 @@
                     <a href="{{ SITEURL }}/{{ article.url }}"><img class="img-responsive" src="{{ SITEURL }}/images/noimageyet_small.jpg" alt="{{ article.title }}"/></a>
                     {% endif %}
                     <h4><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h4>
+                    <p>{{article.tags}}</p>
                     {% if DISPLAY_ARTICLE_INFO_ON_INDEX %}
                         <div class="well well-sm">
                             {% include "includes/article_info.html" %}
